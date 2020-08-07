@@ -151,22 +151,22 @@ function love.update(dt)
   end
 
   -- Player movement
-  if (love.keyboard.isDown("up")) then
+  if (love.keyboard.isDown("up") or love.keyboard.isDown("w")) then
     player.x = player.x + forward_speed * math.cos(point.angle) * dt
     player.y = player.y + forward_speed * math.sin(point.angle) * dt
   end
-  if (love.keyboard.isDown("down")) then
+  if (love.keyboard.isDown("down") or love.keyboard.isDown("s")) then
     player.x = player.x - backward_speed * math.cos(point.angle) * dt
     player.y = player.y - backward_speed * math.sin(point.angle) * dt
   end
 
   --Point movement
-  if (love.keyboard.isDown("right")) then
+  if (love.keyboard.isDown("right") or love.keyboard.isDown("d")) then
     point.angle = point.angle + point.var * dt
     if (point.angle > 2 * math.pi) then
       point.angle = 0
     end
-  elseif (love.keyboard.isDown("left")) then
+  elseif (love.keyboard.isDown("left") or love.keyboard.isDown("a")) then
     point.angle = point.angle - point.var * dt
     if (point.angle < 0) then
       point.angle = 2 * math.pi + point.angle
