@@ -9,4 +9,5 @@ The arrows keys move the character. The 'Tab' key change the game's mode.(Light 
 You can add/remove wall blocks by clicking on the screen.
 
 ## Screenshot
-<img src="https://github.com/MatheusCod/Stars/blob/master/screenshot.png" width="400" height="400">
+<img src="https://github.com/MatheusCod/Ray_casting_2D/blob/master/preview1.gif" width="400" height="400">
+<img src="https://github.com/MatheusCod/Ray_casting_2D/blob/master/preview2.gif" width="400" height="400">
