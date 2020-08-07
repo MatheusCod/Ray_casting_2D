@@ -7,7 +7,9 @@ Ray casting build using Lua programming language and LÖVE 11.3 framework.
 Instructions on how to run the program can be found at: https://love2d.org/wiki/Getting_Started#Running_Games
 
 ## How to play
-The arrows keys move the character. The 'Tab' key change the game's mode.(Light simulations (Black and White) / 72º angle simulation).
+The arrows keys move the character.<br>
+The 'Tab' key change the game's mode.(Light simulation (Black and White) / 72º angle simulation).<br>
+In the light simulation mode you can control the character with the mouse.<br>
 You can add/remove wall blocks by clicking on the screen.
 
 ## Previews
