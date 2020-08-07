@@ -129,10 +129,23 @@ function love.update(dt)
       if (walls[i][j] == 1) then
         -- Player's front collision detection
         if (
-          point.x > (divisor*j - divisor) and
-          point.x < (divisor*j) and
-          point.y > (divisor*i - divisor) and
-          point.y < (divisor*i)
+
+          (
+            point.x > (divisor*j - divisor) and
+            point.x < (divisor*j) and
+            point.y > (divisor*i - divisor) and
+            point.y < (divisor*i)
+          )
+
+          or
+
+          (
+            point.x > (windowWidth) or
+            point.x < (0) or
+            point.y > (windowHeight) or
+            point.y < (0)
+          )
+
         ) then
           forward_speed = 0
         -- Player's back collision detection
@@ -142,6 +155,15 @@ function love.update(dt)
             player.x + player.size * math.cos(point.angle + math.pi) < (divisor*j) and
             player.y + player.size * math.sin(point.angle + math.pi) > (divisor*i - divisor) and
             player.y + player.size * math.sin(point.angle + math.pi) < (divisor*i)
+          )
+
+          or
+
+          (
+            player.x + player.size * math.cos(point.angle + math.pi) > (windowWidth) or
+            player.x + player.size * math.cos(point.angle + math.pi) < (0) or
+            player.y + player.size * math.sin(point.angle + math.pi) > (windowHeight) or
+            player.y + player.size * math.sin(point.angle + math.pi) < (0)
           )
         ) then
           backward_speed = 0
